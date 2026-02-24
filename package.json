@@ -20,6 +20,7 @@
     "name": "butttons"
   },
   "license": "MIT",
+  "sideEffects": false,
   "scripts": {
     "type-check": "tsc --noEmit",
     "changeset:add": "changeset add",
