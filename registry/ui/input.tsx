@@ -23,11 +23,11 @@ const inputVariants = cva(
 export type InputProps = JSX.HTMLAttributes &
 	VariantProps<typeof inputVariants>;
 
-const Input: FC<InputProps> = ({ type, size, ...props }) => {
+const Input: FC<InputProps> = ({ type, size, className, class: cls, ...props }) => {
 	return (
 		<input
 			type={type}
-			class={cn(inputVariants({ size, className: props.class }))}
+			class={cn(inputVariants({ size, className: className ?? cls }))}
 			{...props}
 		/>
 	);

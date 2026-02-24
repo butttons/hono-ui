@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/ui/spinner.tsx",
-      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Spinner({ className, ...props }: { className?: string }) {\n\treturn (\n\t\t<i\n\t\t\tclass={cn(\"animate-spin ph ph-circle-notch\", className)}\n\t\t\tx-cloak\n\t\t\tx-transition:enter=\"transition ease-out duration-300\"\n\t\t\tx-transition:enter-start=\"opacity-0 scale-90\"\n\t\t\tx-transition:enter-end=\"opacity-100 scale-100\"\n\t\t\tx-transition:leave=\"transition ease-in duration-300\"\n\t\t\tx-transition:leave-start=\"opacity-100 scale-100\"\n\t\t\tx-transition:leave-end=\"opacity-0 scale-90\"\n\t\t\t{...props}\n\t\t/>\n\t);\n}\n\nexport { Spinner };\n",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Spinner({ className, class: cls, ...props }: { className?: string; class?: string }) {\n\treturn (\n\t\t<i\n\t\t\tclass={cn(\"animate-spin ph ph-circle-notch\", className ?? cls)}\n\t\t\tx-cloak\n\t\t\tx-transition:enter=\"transition ease-out duration-300\"\n\t\t\tx-transition:enter-start=\"opacity-0 scale-90\"\n\t\t\tx-transition:enter-end=\"opacity-100 scale-100\"\n\t\t\tx-transition:leave=\"transition ease-in duration-300\"\n\t\t\tx-transition:leave-start=\"opacity-100 scale-100\"\n\t\t\tx-transition:leave-end=\"opacity-0 scale-90\"\n\t\t\t{...props}\n\t\t/>\n\t);\n}\n\nexport { Spinner };\n",
       "type": "registry:ui"
     }
   ],

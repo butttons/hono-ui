@@ -13,6 +13,7 @@ export function Switch({
 	disabled,
 	onCheckedChange,
 	className,
+	class: cls,
 	...props
 }: SwitchProps & JSX.HTMLAttributes) {
 	return (
@@ -23,7 +24,7 @@ export function Switch({
 			disabled={disabled}
 			class={cn(
 				"inline-flex relative w-11 h-6 rounded-full border-2 border-transparent transition-colors cursor-pointer inset-shadow bg-secondary-300 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-main-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50",
-				className,
+				className ?? cls,
 			)}
 			{...props}
 		>

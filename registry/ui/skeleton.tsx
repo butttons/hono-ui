@@ -1,10 +1,10 @@
 import type { FC, JSX } from "hono/jsx";
 import { cn } from "@/lib/utils";
 
-export const Skeleton: FC<JSX.HTMLAttributes> = (props) => {
+export const Skeleton: FC<JSX.HTMLAttributes> = ({ className, class: cls, ...props }) => {
 	return (
 		<div
-			class={cn("rounded-md animate-pulse bg-secondary-200", props.class)}
+			class={cn("rounded-md animate-pulse bg-secondary-200", className ?? cls)}
 			{...props}
 		/>
 	);

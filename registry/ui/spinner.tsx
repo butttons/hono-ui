@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 
-function Spinner({ className, ...props }: { className?: string }) {
+function Spinner({ className, class: cls, ...props }: { className?: string; class?: string }) {
 	return (
 		<i
-			class={cn("animate-spin ph ph-circle-notch", className)}
+			class={cn("animate-spin ph ph-circle-notch", className ?? cls)}
 			x-cloak
 			x-transition:enter="transition ease-out duration-300"
 			x-transition:enter-start="opacity-0 scale-90"

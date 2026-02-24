@@ -9,6 +9,7 @@ export type Option = {
 type SelectProps = {
 	options: Option[];
 	paramKey: string;
+	className?: string;
 	class?: string;
 	target: string;
 	label: string;
@@ -35,7 +36,7 @@ export const Select: FC<SelectProps> = (props) => {
 				}}
 			/>
 			<div
-				class={cn("relative", props.class)}
+				class={cn("relative", props.className ?? props.class)}
 				x-data={`select_${props.paramKey}`}
 			>
 				<button

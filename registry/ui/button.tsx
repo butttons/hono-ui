@@ -42,13 +42,15 @@ const Button: FC<ButtonProps & VariantProps<typeof buttonVariants>> = ({
 	variant,
 	size,
 	component = "button",
+	className,
+	class: cls,
 	...props
 }) => {
 	const Comp = component;
 	return (
 		<Comp
 			data-slot="button"
-			class={cn(buttonVariants({ variant, size, className: props.className }))}
+			class={cn(buttonVariants({ variant, size, className: className ?? cls }))}
 			{...props}
 		/>
 	);

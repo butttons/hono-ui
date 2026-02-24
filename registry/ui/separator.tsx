@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 function Separator({
 	className,
+	class: cls,
 	orientation = "horizontal",
 	decorative = true,
 	...props
@@ -19,7 +20,7 @@ function Separator({
 			data-orientation={orientation}
 			class={cn(
 				"bg-secondary-200 shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px",
-				className,
+				className ?? cls,
 			)}
 			{...props}
 		/>
