@@ -1,22 +1,26 @@
 # @butttons/hono-ui
 
-Server-rendered UI components for Hono JSX. No client JS. Pure HTML and Tailwind.
+shadcn/ui for Hono. Server-rendered components, no client JS.
 
-Uses the [shadcn CLI](https://ui.shadcn.com/docs/cli) for component installation.
+## Setup
+
+Register the registry in your project:
+
+```bash
+shadcn registry add "@hono-ui=https://raw.githubusercontent.com/butttons/hono-ui/main/public/r/{name}.json"
+```
 
 ## Usage
 
-Add a component directly from the registry:
+```bash
+shadcn add @hono-ui/button
+shadcn add @hono-ui/card
+```
+
+Or add directly via URL without registering:
 
 ```bash
 shadcn add https://raw.githubusercontent.com/butttons/hono-ui/main/public/r/button.json
-```
-
-Or add the registry to your project and use short names:
-
-```bash
-shadcn registry add https://raw.githubusercontent.com/butttons/hono-ui/main/public/r/registry.json
-shadcn add hono-ui/button
 ```
 
 ## Components
