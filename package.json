@@ -1,0 +1,42 @@
+{
+  "name": "@butttons/hono-ui",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Server-rendered UI components for Hono JSX. No client JS. Pure HTML and Tailwind.",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/butttons/hono-ui"
+  },
+  "author": {
+    "name": "butttons"
+  },
+  "license": "MIT",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "changeset:add": "changeset add",
+    "changeset:version": "changeset version"
+  },
+  "peerDependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "hono": "^4.6.3",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "hono": "^4.6.3",
+    "tailwind-merge": "^2.6.0",
+    "typescript": "5.8.2"
+  }
+}
