@@ -29,8 +29,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install shadcn
-        run: pnpm add -g shadcn@latest
-
       - name: Build registry
         run: pnpm build
