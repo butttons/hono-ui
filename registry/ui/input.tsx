@@ -27,7 +27,7 @@ const Input: FC<InputProps> = ({ type, size, ...props }) => {
 	return (
 		<input
 			type={type}
-			className={cn(inputVariants({ size, className: props.class }))}
+			class={cn(inputVariants({ size, className: props.class }))}
 			{...props}
 		/>
 	);

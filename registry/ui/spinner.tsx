@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 function Spinner({ className, ...props }: { className?: string }) {
 	return (
 		<i
-			className={cn("animate-spin ph ph-circle-notch", className)}
+			class={cn("animate-spin ph ph-circle-notch", className)}
 			x-cloak
 			x-transition:enter="transition ease-out duration-300"
 			x-transition:enter-start="opacity-0 scale-90"

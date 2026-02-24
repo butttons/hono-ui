@@ -6,7 +6,7 @@ function Card({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card"
-			className={cn(
+			class={cn(
 				"flex flex-col gap-6 py-6 rounded-xl border shadow-sm bg-card text-card-foreground",
 				className,
 			)}
@@ -19,7 +19,7 @@ function CardHeader({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-header"
-			className={cn(
+			class={cn(
 				"@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
 				className,
 			)}
@@ -32,7 +32,7 @@ function CardTitle({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-title"
-			className={cn("font-semibold leading-none", className)}
+			class={cn("font-semibold leading-none", className)}
 			{...props}
 		/>
 	);
@@ -42,7 +42,7 @@ function CardDescription({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-description"
-			className={cn("text-sm text-muted-foreground", className)}
+			class={cn("text-sm text-muted-foreground", className)}
 			{...props}
 		/>
 	);
@@ -52,7 +52,7 @@ function CardAction({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-action"
-			className={cn(
+			class={cn(
 				"col-start-2 row-span-2 row-start-1 justify-self-end self-start",
 				className,
 			)}
@@ -65,7 +65,7 @@ function CardContent({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-content"
-			className={cn("px-6", className)}
+			class={cn("px-6", className)}
 			{...props}
 		/>
 	);
@@ -75,7 +75,7 @@ function CardFooter({ className, ...props }: JSX.HTMLAttributes) {
 	return (
 		<div
 			data-slot="card-footer"
-			className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
+			class={cn("flex items-center px-6 [.border-t]:pt-6", className)}
 			{...props}
 		/>
 	);

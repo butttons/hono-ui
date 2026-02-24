@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/ui/skeleton.tsx",
-      "content": "import type { FC, JSX } from \"hono/jsx\";\nimport { cn } from \"@/lib/utils\";\n\nexport const Skeleton: FC<JSX.HTMLAttributes> = (props) => {\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\"rounded-md animate-pulse bg-secondary-200\", props.class)}\n\t\t\t{...props}\n\t\t/>\n\t);\n};\n",
+      "content": "import type { FC, JSX } from \"hono/jsx\";\nimport { cn } from \"@/lib/utils\";\n\nexport const Skeleton: FC<JSX.HTMLAttributes> = (props) => {\n\treturn (\n\t\t<div\n\t\t\tclass={cn(\"rounded-md animate-pulse bg-secondary-200\", props.class)}\n\t\t\t{...props}\n\t\t/>\n\t);\n};\n",
       "type": "registry:ui"
     }
   ],

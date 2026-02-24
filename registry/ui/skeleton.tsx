@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export const Skeleton: FC<JSX.HTMLAttributes> = (props) => {
 	return (
 		<div
-			className={cn("rounded-md animate-pulse bg-secondary-200", props.class)}
+			class={cn("rounded-md animate-pulse bg-secondary-200", props.class)}
 			{...props}
 		/>
 	);
