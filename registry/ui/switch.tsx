@@ -1,5 +1,5 @@
 import type { JSX } from "hono/jsx";
-import { cn } from "../utils";
+import { cn } from "@/lib/utils";
 
 type SwitchProps = {
 	checked?: boolean;

@@ -2,50 +2,30 @@
 
 Server-rendered UI components for Hono JSX. No client JS. Pure HTML and Tailwind.
 
-## Install
-
-```bash
-pnpm add @butttons/hono-ui
-```
-
-Peer dependencies: `hono`, `class-variance-authority`, `clsx`, `tailwind-merge`.
+Uses the [shadcn CLI](https://ui.shadcn.com/docs/cli) for component installation.
 
 ## Usage
 
-```tsx
-import { Button, Card, CardHeader, CardContent, cn } from "@butttons/hono-ui";
+Add a component directly from the registry:
 
-const Page = () => (
-  <Card>
-    <CardHeader>Title</CardHeader>
-    <CardContent>
-      <Button variant="default" size="sm">Click</Button>
-    </CardContent>
-  </Card>
-);
+```bash
+shadcn add https://raw.githubusercontent.com/butttons/hono-ui/main/public/r/button.json
+```
+
+Or add the registry to your project and use short names:
+
+```bash
+shadcn registry add https://raw.githubusercontent.com/butttons/hono-ui/main/public/r/registry.json
+shadcn add hono-ui/button
 ```
 
 ## Components
 
-- Avatar
-- Button
-- Card (Card, CardHeader, CardFooter, CardTitle, CardAction, CardDescription, CardContent)
-- Input
-- Label
-- Select
-- Separator
-- Skeleton
-- Spinner
-- Switch
+avatar, button, card, input, label, select, separator, skeleton, spinner, switch
 
-## Tailwind
+## Peer Dependencies
 
-Add the package source to your Tailwind content paths so component classes get scanned:
-
-```js
-// tailwind.config or CSS @source directive
-content: ["./node_modules/@butttons/hono-ui/src/**/*.tsx"]
-```
+`hono`, `class-variance-authority`, `clsx`, `tailwind-merge`
 
 ## License
 

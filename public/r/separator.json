@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/separator.tsx",
+      "content": "import type { JSX } from \"hono/jsx\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Separator({\n\tclassName,\n\torientation = \"horizontal\",\n\tdecorative = true,\n\t...props\n}: JSX.HTMLAttributes & {\n\torientation?: \"horizontal\" | \"vertical\";\n\tdecorative?: boolean;\n\tclassName?: string;\n}) {\n\treturn (\n\t\t<div\n\t\t\tdata-slot=\"separator\"\n\t\t\tdecorative={decorative}\n\t\t\tdata-orientation={orientation}\n\t\t\tclass={cn(\n\t\t\t\t\"bg-secondary-200 shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px\",\n\t\t\t\tclassName,\n\t\t\t)}\n\t\t\t{...props}\n\t\t/>\n\t);\n}\n\nexport { Separator };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,6 +1,6 @@
 import type { JSX } from "hono/jsx";
 
-import { cn } from "../utils";
+import { cn } from "@/lib/utils";
 
 function Separator({
 	className,

@@ -1,20 +1,23 @@
 # @butttons/hono-ui
 
-Server-rendered Hono JSX UI components. No client JS. Tailwind + `cn` utility only.
+Server-rendered Hono JSX UI components distributed as a shadcn registry.
 
 ## Structure
 
-- `src/utils.ts` -- `cn` utility (clsx + tailwind-merge)
-- `src/ui/` -- component files
-- `src/index.ts` -- barrel export
+- `registry/lib/utils.ts` -- `cn` utility (clsx + tailwind-merge)
+- `registry/ui/` -- component source files
+- `registry.json` -- shadcn registry manifest
+- `public/r/` -- built registry output (committed)
+
+## Adding a Component
+
+1. Create the `.tsx` file in `registry/ui/`.
+2. Import `cn` from `@/lib/utils` (shadcn rewrites this at install time).
+3. Add an entry to `registry.json` with deps and `registryDependencies: ["utils"]`.
+4. Run `pnpm build` to regenerate `public/r/`.
 
 ## Code Style
 
 - Prefer `type` over `interface`.
 - Boolean variables prefixed with `is` or `has`.
-- Functions take a single object parameter.
-- Never use `any`.
-
-## Publishing
-
-Changesets for versioning. Tag-triggered GitHub Actions workflow publishes to npm.
+- No client JS. Server-rendered only.

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/button.tsx",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\nimport type { Child, FC, JSX } from \"hono/jsx\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n\t\"inline-flex items-center justify-center whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-secondary-950 disabled:pointer-events-none disabled:opacity-50\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault: \"bg-primary-500 text-white hover:bg-primary-500/90\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"bg-red-50 text-red-500 hover:bg-red-500/90 hover:text-red-50\",\n\t\t\t\toutline:\n\t\t\t\t\t\"border border-secondary-300 bg-white  hover:bg-secondary-100 hover:text-secondary-900\",\n\t\t\t\tsecondary: \"bg-secondary-900 text-white hover:bg-secondary-900/80\",\n\t\t\t\tghost: \"hover:bg-secondary-100 hover:text-secondary-900 \",\n\t\t\t\tlink: \"text-secondary-900 underline-offset-4 hover:underline \",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tdefault: \"h-9 px-4 py-2 text-sm\",\n\t\t\t\tsm: \"h-8 rounded-md px-3 text-xs\",\n\t\t\t\tlg: \"h-12 rounded-md px-8 text-base\",\n\t\t\t\tblock: \"self-center h-10 px-8 py-6 rounded-lg text-base w-80\",\n\t\t\t\ticon: \"h-9 w-9\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"default\",\n\t\t},\n\t},\n);\ntype ButtonProps = {\n\tclassName?: string;\n\tchildren: Child;\n\thref?: string;\n\tcomponent?: \"button\" | \"a\";\n} & Omit<JSX.HTMLAttributes, \"class\">;\n\nconst Button: FC<ButtonProps & VariantProps<typeof buttonVariants>> = ({\n\tvariant,\n\tsize,\n\tcomponent = \"button\",\n\t...props\n}) => {\n\tconst Comp = component;\n\treturn (\n\t\t<Comp\n\t\t\tdata-slot=\"button\"\n\t\t\tclass={cn(buttonVariants({ variant, size, className: props.className }))}\n\t\t\t{...props}\n\t\t/>\n\t);\n};\n\nexport { Button, buttonVariants };\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import type { FC, JSX } from "hono/jsx";
-import { cn } from "../utils";
+import { cn } from "@/lib/utils";
 
 const inputVariants = cva(
 	"flex rounded-md border border-secondary-200 bg-transparent text-sm  transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-secondary-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50",

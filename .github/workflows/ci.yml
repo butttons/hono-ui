@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  typecheck:
-    name: Type check
+  build:
+    name: Build registry
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,5 +29,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Type check
-        run: pnpm type-check
+      - name: Install shadcn
+        run: pnpm add -g shadcn@latest
+
+      - name: Build registry
+        run: pnpm build

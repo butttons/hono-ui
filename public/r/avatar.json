@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/avatar.tsx",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst avatarVariants = cva(\"flex items-center justify-center rounded-full \", {\n\tvariants: {\n\t\tvariant: {\n\t\t\ttransparent: \"bg-transparent\",\n\t\t\tsolid: \"bg-[#D9D9D95E]\",\n\t\t\tdefault: \"bg-secondary-100 text-secondary-600 backdrop-blur\",\n\t\t},\n\t\tsize: {\n\t\t\tmd: \"text-2xl w-14 h-14\",\n\t\t\tsm: \"text-xl w-10 h-10\",\n\t\t},\n\t},\n\tdefaultVariants: {\n\t\tvariant: \"default\",\n\t\tsize: \"md\",\n\t},\n});\n\ntype AvatarProps = VariantProps<typeof avatarVariants> & {\n\tname?: string;\n};\n\nconst getInitials = (name: string) => {\n\tconst [firstName, ...lastName] = name.split(\" \");\n\treturn `${firstName?.[0] ?? \"\"}${lastName[lastName.length - 1]?.[0] ?? \"\"}`;\n};\n\nexport const Avatar = ({ name, size, variant }: AvatarProps) => {\n\treturn (\n\t\t<div className={cn(avatarVariants({ size, variant }))}>\n\t\t\t{name ? getInitials(name) : <i class=\"ph ph-user\" />}\n\t\t</div>\n\t);\n};\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

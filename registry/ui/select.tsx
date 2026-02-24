@@ -1,5 +1,5 @@
 import type { FC } from "hono/jsx";
-import { cn } from "../utils";
+import { cn } from "@/lib/utils";
 
 export type Option = {
 	label: string;
